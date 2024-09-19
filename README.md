@@ -17,4 +17,7 @@ A ***cool*** repository for my MDIA 1620 code
 
 <em>my favourite sandwich</em>
 ![image](https://github.com/user-attachments/assets/652fccdf-d1d0-4c27-8be8-9b390daabef3)
-HI THEre
+
+
+github give me a headache
+
