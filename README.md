@@ -22,7 +22,7 @@ A ***cool*** repository for my MDIA 1620 code
 
 **3. aha moments**
 1. You can push to git your work so cool
-2. The things we learn today would be so useful
+2. The things we learned today would be so useful
 3. I figured out the how to use string and quote marks 
 
 **2. things still unclear**
