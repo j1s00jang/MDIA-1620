@@ -18,6 +18,17 @@ A ***cool*** repository for my MDIA 1620 code
 <em>my favourite sandwich</em>
 ![image](https://github.com/user-attachments/assets/652fccdf-d1d0-4c27-8be8-9b390daabef3)
 
+<h1>Sep 19, JISOO</h1>
 
-github give me a headache
+**3. aha moments**
+1. You can push to git your work so cool
+2. The things we learn today would be so useful
+3. I figured out the how to use string and quote marks 
+
+**2. things still unclear**
+1. I understood everything today we learend.
+2. Thank you Sonja
+
+**1. word for how you're feeling**
+1. Solving problem could be stressful but after I figure out, I feel great. 
 
