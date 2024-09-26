@@ -18,26 +18,11 @@ console.log(typeof horseAge);
 console.log(horseName);
 
 const STABLES_MONTHLY_FEE = 1000;
-let horseIntroduction = " is the name of my horse"
+let horseIntroduction = " has strong legs and his nickname is "
 let horseAgeIn10Years = horseAge + 10;
-console.log(rentIntroduction)
-// let rentIntroduction ="it cost " + STABLE_MONTHLY_FEE + " to board " + horseName;
 
-console.log(horseAgeIn10Years);
+let horseNickName = "Sean"
 
-
-console.log(STABLES_MONTHLY_FEE);
-console.log(2 + 3);
-console.log(100 + 100);
-console.log(STABLES_MONTHLY_FEE + STABLES_MONTHLY_FEE);
-console.log(STABLES_MONTHLY_FEE - 20);
-console.log(STABLES_MONTHLY_FEE + horseAge);
-
-
-
-// multiplication operator = * 
-// division operater = / 
-
-console.log(horseName + " is the name of my horse");
-console.log(horseName + horseIntroduction)
-
+console.log(horseNickName + horseIntroduction);
+console.log(horseName + horseIntroduction + horseNickName);
+console.log((STABLES_MONTHLY_FEE * 3) * 0.10);
