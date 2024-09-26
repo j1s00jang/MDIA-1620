@@ -25,4 +25,6 @@ let horseNickName = "Sean"
 
 console.log(horseNickName + horseIntroduction);
 console.log(horseName + horseIntroduction + horseNickName);
-console.log((STABLES_MONTHLY_FEE * 3) * 0.10);
+let savings = STABLES_MONTHLY_FEE * 3 * 0.10;
+
+console.log(`With this discount I save $${savings}.`);
