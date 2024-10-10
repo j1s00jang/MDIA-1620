@@ -33,6 +33,7 @@ A ***cool*** repository for my MDIA 1620 code
 1. Solving problem could be stressful but after I figure out, I feel great. 
 
 <h1>Oct 10, Lab 6 - Jisoo</h1>
+
 **3 things still confused**
 1. I am still confused about 'if, comparison statement'
 2. If I use 'let' to same horse name, then what about first horse name? Not attached? 
@@ -45,5 +46,6 @@ A ***cool*** repository for my MDIA 1620 code
 
 
 <em>analogies that you use to think about things</em>
+
 ![image](https://media.tenor.com/1uRMTJdgMNYAAAAM/dumb-cat.gif)
 
