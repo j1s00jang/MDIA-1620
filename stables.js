@@ -91,7 +91,7 @@ if (horseOne[1] === 3) {
 console.log(horseOne[0] + " and " + horseTwo[0] + " are staying at the stables");
 
 
-let horseNames = [horseName, "Strawberry", "Ron"];
+let horseNames = [horseName, "Hermione", "Ron"];
 let horseAges = [horseAge, 3, 2];
 let horseNicknames = [horseNickName, "Pie", "Wisley"];
 let areHorsesInside = [isHorseInside, false, true]; 
@@ -119,18 +119,16 @@ let labPracticeHorseIntro =
 + horseNames [0] + ", " + horseNames[1] + ", " + horseNames[2] + "!!";
 console.log(labPracticeHorseIntro);
 
-let bestFriendsAreInside = true;
-
-if (bestFriendsAreInside === true) {
-    console.log("They are inside.");
+if (isHorseInside === true) {
+    console.log(`${horseName}` + " wants to be inside today. " + `${visitingHorseName}` + " wants to play outside.");
 } else {
-    console.log("They are outside.");
+    console.log(`${horseName}` + " wants play outside!");
 }
 
-let bestFriendsStayInside = false;
+let thirdHorseName = "Hermione"
 
-if (bestFriendsStayInside === false) {
-    console.log("They want to be outside.")
-} else {
-    console.log("They want to play outside.")
+if (isHorseInside === true) {
+    console.log(`${thirdHorseName}` + " wants read books inside.");
+} else { 
+    console.log(`${thirdHorseName}` + " wants to be outside.");
 }
