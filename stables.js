@@ -55,3 +55,82 @@ if (horseName === "Harry" && visitingHorseName === "🪄 Ron" && isHorseInside) 
 } else {
     console.log(horseName + " needs to figure out what to do.")
 }
+
+
+// lesson 6 code 
+//let word = "Pumpkin";
+//console.log(word.charAt(0));
+// it shows "R"
+//console.log(word.charAt(2));
+// it shows "m" because In JavaScript, indexes start at "0"
+
+// Arrays let you store multiple items under one variable declaration + always comes with [ ] and , 
+// Horse = ["name", age, isInside]
+let horseOne = [horseName, horseAge, isHorseInside, horseNickName];
+let horseTwo = ["Strawberry", 2, false, "Pie"];
+
+console.log(horseOne);
+console.log(horseTwo);
+console.log(horseOne.length);
+// length means how many items in your array 
+horseOne.push("red");
+// this add up at the end of array
+console.log(horseOne);
+
+console.log(horseOne[0] + "'s nickname is " + horseOne[3]);
+console.log(`${horseTwo[0]}'s nickname is ${horseTwo[3]}`);
+// two different way to bring up from arrays 
+
+console.log(horseOne[1] + horseTwo[1]);
+
+if (horseOne[1] === 3) {
+    console.log(horseOne[0] + " is 3");
+} else {
+    console.log(horseOne[0] + " is NOT 3");
+}
+console.log(horseOne[0] + " and " + horseTwo[0] + " are staying at the stables");
+
+
+let horseNames = [horseName, "Strawberry", "Ron"];
+let horseAges = [horseAge, 3, 2];
+let horseNicknames = [horseNickName, "Pie", "Wisley"];
+let areHorsesInside = [isHorseInside, false, true]; 
+
+let horseIntro = `There are ${horseNames.length} horses staying at my stables: ${horseNames[0]}, ${horseNames[1]}, ${horseNames[2]}!`;
+console.log(horseIntro);
+
+let differentHorseIntro = 
+"There are " + horseNames.length + " horses staying at my stables: " 
++ horseNames[0] + ", " + horseNames[1] + ", " + horseNames[2] + "!";
+console.log(differentHorseIntro);
+
+
+// LAB TODAY by Sunday 10/13
+//stables.js
+// - output an introduction to your horses 
+// - output whether your horses are inside or outside AT LEAST THREE HORSES !!! 
+// Readme
+// 3 confusing things
+// 3 things you feel like you have a solid understanding of 
+// analogies that you use to think about things (gif)
+
+let labPracticeHorseIntro = 
+"They are " + horseNames.length + " best friends in the world: "
++ horseNames [0] + ", " + horseNames[1] + ", " + horseNames[2] + "!!";
+console.log(labPracticeHorseIntro);
+
+let bestFriendsAreInside = true;
+
+if (bestFriendsAreInside === true) {
+    console.log("They are inside.");
+} else {
+    console.log("They are outside.");
+}
+
+let bestFriendsStayInside = false;
+
+if (bestFriendsStayInside === false) {
+    console.log("They want to be outside.")
+} else {
+    console.log("They want to play outside.")
+}
