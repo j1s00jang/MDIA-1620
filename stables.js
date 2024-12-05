@@ -39,6 +39,13 @@ function Horse(name, nickname, faveTreat, colour, age, monthlyRent, isInStable, 
     this.rentNotice = function(daysUntilDue) {
         console.log(`${this.name}'s rent is due in ${daysUntilDue}, and is $${this.monthlyRent}!`);
     }
+    this.checkLocation = function() {
+        if (this.isInStable == true) {
+            console.log(`${this.name} is in the stable now, resting!`)
+        } else {
+            console.log(`${this.name} is out of the stable. Want to run!`)
+        };
+    };
 };
 
 function introduction(horses) {
@@ -60,6 +67,11 @@ horses.push (
 elphaba.rentNotice(10)
 glinda.rentNotice(5)
 fiyero.rentNotice(15)
+
+horses[0].checkLocation()
+horses[1].checkLocation()
+horses[2].checkLocation()
+
 
 
 introduction(horses[0]);
@@ -99,7 +111,7 @@ if (horses[i].isHungry == true) {
 }
 }
 
-console.log("In our magical stable, " + (availableStalls - horses.length) + " stalls are available now!"); 
+console.log("In our magical stable, " + (availableStalls - horses.length) + " more horses can be in the stalls!"); 
 
 
 if (availableStalls - horses.length < 2) {
@@ -241,3 +253,6 @@ function moveAllHorsesOutside(horses, isDark) {
 }
 
 moveAllHorsesOutside(horses, isDark);
+
+
+console.log("Thanks for visiting our magical stable. Currently " + (availableStalls - horses.length) + " stall available. Come again!");
