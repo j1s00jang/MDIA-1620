@@ -1,134 +1,232 @@
-console.log("horses are great!")
 
-let horseName = "CoolGuy" //hahaha this is comment or note 
-horseName = "Charlie" // for strings, prefer double quotes
-let horseAge = 5; // number doesnt need quotes. why? computer recognizes as a word or code not a number. if i make a code for caculation, it would not work as number. 
-console.log(horseName);
-console.log(horseAge);
-let isHorseInStable = true; // true or false 
-console.log(isHorseInStable); 
-isHorseInStable = false;
-horseName = "Harry"
-horseAge = 5;
-console.log(horseName);
-
-console.log(typeof 890224)
-console.log(typeof "890225")
-console.log(typeof horseAge);
-console.log(horseName);
-
-const STABLES_MONTHLY_FEE = 1000;
-let horseIntroduction = " has strong legs and his nickname is "
-let horseAgeIn10Years = horseAge + 10;
-
-let horseNickName = "Potter"
-
-console.log(horseNickName + horseIntroduction);
-console.log(horseName + horseIntroduction + horseNickName);
-let savings = STABLES_MONTHLY_FEE * 3 * 0.10;
-
-console.log(`With this discount I save $${savings}.`);
+// 🌞🌻🌼🌸🌞🌺🌷🌹🌞
+// _,,)🎩\.~,,._
+// (💚)`  ``)\)❇️),,_
+// 💓|     \ ''((\)))))),,_          ____
+//  |6`   |   ''((\💚))) "-.____.-"    `-.-,
+//  |    .'\    ''))))'                  \))❇️
+//   |   |   `.     ''                     ((((
+//   \, _)     \/                          |))))
+//   `'🍓      |                          (💚(((
+//             \                  |       ))))))
+//              `|    |           ,\     /((((((
+//               |   / `\         <  \   |  )))❇️)
+//               |   |   ._______.`. \  \  ((((
+//             🧹|  / \ |           `.\  | (💚(🧹
+//               \  | | |             )| |  ))
+//                | | | |            / | |  '
+//                | | /_(           /_(/ /
+//                /_(/__]           \_/_(
+//               /__]                /__]
 
 
-// LESSON-5 Code true value=more than 1 or false=0 
-// if you put true in bracket, console log shows it you put false, no shows
+let horses = [];
+let messageForVisitors = "Welcome to Magical Stable!";
+let LATE_PAYMENT_FEE = 1000;
+let availableStalls = 10; 
 
-let isHorseInside = true;
+console.log(messageForVisitors)
 
-if (isHorseInside) {
-    console.log(horseName + " is inside.")
+function Horse(name, nickname, faveTreat, colour, age, monthlyRent, isInStable, isHungry) {
+    this.name = name;
+    this.nickname = nickname;
+    this.faveTreat = faveTreat;
+    this.colour = colour;
+    this.age = age;
+    this.monthlyRent = monthlyRent;
+    this.isInStable = isInStable;
+    this.isHungry = isHungry;
+};
+
+
+function introduction(horses) {
+    console.log(horses.name + " is happy to meet you. 💖 " + horses.faveTreat + " is favourite treat! And nickname is " + horses.nickname + "!");
 }
 
-let visitingHorseName = "🪄 Ron"
 
-// Strawberry !== (doesnt' equal) Harry
-if (horseName == "Harry") {
-    console.log(visitingHorseName + " has come to visit the stables!")
+horses.push (
+    new Horse("Elphaba", "Wicked Wizard", "🍓 Strawberry", "Green", 3, 1000, true, false),
+    new Horse("Glinda", "Princess", "🫑 Green Pepper", "Pink", 2, 2000, false, false),
+    new Horse("Fiyero", "Prince", "🌷 Flower", "Yellow", 4, 500, false, true),
+);
+
+
+introduction(horses[0]);
+introduction(horses[1]);
+introduction(horses[2]);
+
+
+let visitorHorse = {
+    name : "Boq",
+    nickname : "Munchkin",
+    faveTreat : "🍎 Apple",
+    colour : "Orange",
+    age : 5,
+    monthlyRent : 10,
+    isInStable : true,
+    isHungry : true,
+};
+
+horses.push (visitorHorse);
+
+introduction(visitorHorse);
+
+
+for (let i = 0; i < horses.length; i++) {
+if (horses[i].isInStable == true) {
+    console.log(horses[i].name + " is in the stable. Want to be alone.");
 } else {
-    console.log(horseName + " is lonely!")
+    console.log(horses[i].name + " is looking at the sky. Curious about the birds.");
 }
-// ! is negation. runs if the condition is false
-// is horseinside is false. so horse is outside. 
+}
 
-if (horseName === "Harry" && visitingHorseName === "🪄 Ron" && isHorseInside) {
-    console.log(`${horseName} has a visitor and their name is ${visitingHorseName}`);
+for (let i = 0; i < horses.length; i++) {
+if (horses[i].isHungry == true) {
+    console.log(horses[i].name + " is thinking about food. Hungry...");
 } else {
-    console.log(horseName + " needs to figure out what to do.")
+    console.log(horses[i].name + " is not hungry. Lose appetite for some reason...");
+}
 }
 
+console.log("In our magical stable, " + (availableStalls - horses.length) + " stalls are available now!"); 
 
-// lesson 6 code 
-//let word = "Pumpkin";
-//console.log(word.charAt(0));
-// it shows "R"
-//console.log(word.charAt(2));
-// it shows "m" because In JavaScript, indexes start at "0"
 
-// Arrays let you store multiple items under one variable declaration + always comes with [ ] and , 
-// Horse = ["name", age, isInside]
-let horseOne = [horseName, horseAge, isHorseInside, horseNickName];
-let horseTwo = ["Strawberry", 2, false, "Pie"];
-
-console.log(horseOne);
-console.log(horseTwo);
-console.log(horseOne.length);
-// length means how many items in your array 
-horseOne.push("red");
-// this add up at the end of array
-console.log(horseOne);
-
-console.log(horseOne[0] + "'s nickname is " + horseOne[3]);
-console.log(`${horseTwo[0]}'s nickname is ${horseTwo[3]}`);
-// two different way to bring up from arrays 
-
-console.log(horseOne[1] + horseTwo[1]);
-
-if (horseOne[1] === 3) {
-    console.log(horseOne[0] + " is 3");
+if (availableStalls - horses.length < 2) {
+    console.log("We need to build more stalls!")
 } else {
-    console.log(horseOne[0] + " is NOT 3");
-}
-console.log(horseOne[0] + " and " + horseTwo[0] + " are staying at the stables");
-
-
-let horseNames = [horseName, "Hermione", "Ron"];
-let horseAges = [horseAge, 3, 2];
-let horseNicknames = [horseNickName, "Pie", "Wisley"];
-let areHorsesInside = [isHorseInside, false, true]; 
-
-let horseIntro = `There are ${horseNames.length} horses staying at my stables: ${horseNames[0]}, ${horseNames[1]}, ${horseNames[2]}!`;
-console.log(horseIntro);
-
-let differentHorseIntro = 
-"There are " + horseNames.length + " horses staying at my stables: " 
-+ horseNames[0] + ", " + horseNames[1] + ", " + horseNames[2] + "!";
-console.log(differentHorseIntro);
-
-
-// LAB TODAY by Sunday 10/13
-//stables.js
-// - output an introduction to your horses 
-// - output whether your horses are inside or outside AT LEAST THREE HORSES !!! 
-// Readme
-// 3 confusing things
-// 3 things you feel like you have a solid understanding of 
-// analogies that you use to think about things (gif)
-
-let labPracticeHorseIntro = 
-"They are " + horseNames.length + " best friends in the world: "
-+ horseNames [0] + ", " + horseNames[1] + ", " + horseNames[2] + "!!";
-console.log(labPracticeHorseIntro);
-
-if (isHorseInside === true) {
-    console.log(`${horseName}` + " wants to be inside today. " + `${visitingHorseName}` + " wants to play outside.");
-} else {
-    console.log(`${horseName}` + " wants play outside!");
+    console.log(`We have ${availableStalls - horses.length} available! Join our stable now!`)
 }
 
-let thirdHorseName = "Hermione"
-
-if (isHorseInside === true) {
-    console.log(`${thirdHorseName}` + " wants read books inside.");
-} else { 
-    console.log(`${thirdHorseName}` + " wants to be outside.");
+function latePayment(horse, rentDueDate) {
+    console.log(`${horse.name}'s rent due date is late, and is $${horse.monthlyRent}! Late payment fee is $${LATE_PAYMENT_FEE}! Pay promptly!`);
 }
+
+latePayment(horses[0]);
+latePayment(horses[1]);
+latePayment(horses[2]);
+
+
+for (let i = 0; i < horses.length; i++) {
+    if (horses[i].faveTreat == "🌷 Flower" === true) {
+        console.log(horses[i].name + " loves eating " + horses[i].faveTreat + "! Happy to eat now!");
+    } else {
+        console.log(horses[i].name + " wants to eat some " + horses[i].faveTreat + ". Keep checking!")
+    };
+}
+
+
+function getHorseNicknames(horse, friend, friend2, friend3) {
+    let string = `${horses[0].name}'s nickname is ${horses[0].nickname}, 
+and they have a friend named ${horses[1].name}, who is nicknamed ${horses[1].nickname}!
+And ${horses[2].name}'s nickname is ${horses[2].nickname}.
+Lastly, ${horses[3].name}'s nickname is ${horses[3].nickname}!`;
+
+    return string;
+}
+
+let horseNicknamesString = getHorseNicknames(0, 1, 2, 3);
+console.log(horseNicknamesString);
+
+
+function findHungryHorse(horses) {
+    for (let i = 0; i < horses.length; i++){
+        if (horses[i].isHungry == true) {
+            console.log(horses[i].name + " is hungry now. Crying for food!");
+        } else {
+            console.log(horses[i].name + " is not hungry. Maybe later!");
+        }
+    }
+}
+
+findHungryHorse(horses);
+
+
+function moveAllHorsesOutside(horses) {
+    for (let i = 0; i < horses.length; i++) {
+        if (horses[i].isInStable == true) {
+            horses[i].isInStable = false;
+            console.log(horses[i].name + " is now out of the stable, Run!");
+        } else {
+            console.log(horses[i].name + " has been outside already.");
+        }
+    }
+}
+
+moveAllHorsesOutside(horses);
+
+
+
+horses.push (
+    new Horse("Harry", "Great Wizard", "Butter Beer", "Red", 5, 300, true, true),
+    new Horse("Ron", "Ronnie", "Jelly Bean", "White", 6, 200, false, true),
+    new Horse("Hermione", "Big Brain", "Chocolate Frog", "Blue", 7, 450, false, false),
+);
+
+function switchHorsesInsideout(horses) {
+    for (let i = 0; i < horses.length; i++) {
+        if (horses[i].isInStable == true) {
+            horses[i].isInStable = false;
+            console.log(horses[i].name + " is out now, Get some fresh air!");
+        }   else {
+            horses[i].isInStable = true;
+            console.log(horses[i].name + " is in the stable now.");
+        }
+    }
+}
+
+switchHorsesInsideout(horses);
+
+function dinnerTime(horses) {
+    for (let i = 0; i < horses.length; i++) {
+        if (horses[i].isInStable == false) {
+            horses[i].isInStable = true; 
+            console.log(horses[i].name + " is in the stable, " + horses[i].faveTreat + " is ready!");
+        } 
+
+        if (horses[i].isHungry == true) {
+            horses[i].isHungry = false;
+            console.log(horses[i].name + " is full, no food for now."); 
+        }
+    }
+}
+
+dinnerTime (horses);
+
+
+
+horses.push (
+    new Horse("Sirius", "Padfoot", "Sherbet Lemon", "Grey", 10, 500, true, true),
+    new Horse("Rupin", "Moony", "Pumpkin Pie", "Gold", 11, 550, false, false),
+    new Horse("James", "Prongs", "Yorkshire Pudding", "Silver", 12, 600, true, true),
+);
+
+let isDark = true;
+
+function moveAllHorsesInside(horses, isDark) {
+    for (let i = 0; i < horses.length; i++) {
+        if (isDark) {
+            if (horses[i].isInStable == false) {
+                horses[i].isInStable = true;
+                console.log(horses[i].name + " came into the stable. Hit the hay!");
+            } else {
+                console.log(horses[i].name + " was ready to sleep. Good night!");
+            }
+        }
+    }
+}
+
+moveAllHorsesInside(horses, isDark);
+
+
+function moveAllHorsesOutside(horses, isDark) {
+    for (let i = 0; i < horses.length; i++) {
+        if (isDark) {
+            if (horses[i].isInStable == true) {
+                horses[i].isInStable = false;
+                console.log(horses[i].name + " just got up. Go out and enjoy the morning sunshine!");
+            }
+        }
+    }
+}
+
+moveAllHorsesOutside(horses, isDark);
