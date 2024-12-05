@@ -36,12 +36,19 @@ function Horse(name, nickname, faveTreat, colour, age, monthlyRent, isInStable, 
     this.monthlyRent = monthlyRent;
     this.isInStable = isInStable;
     this.isHungry = isHungry;
+    this.rentNotice = function(daysUntilDue) {
+        console.log(`${this.name}'s rent is due in ${daysUntilDue}, and is $${this.monthlyRent}!`);
+    }
 };
-
 
 function introduction(horses) {
     console.log(horses.name + " is happy to meet you. 💖 " + horses.faveTreat + " is favourite treat! And nickname is " + horses.nickname + "!");
 }
+
+
+let elphaba = new Horse("Elphaba", "Wicked Wizard", "🍓 Strawberry", "Green", 3, 1000, true, false);
+let glinda = new Horse("Glinda", "Princess", "🫑 Green Pepper", "Pink", 2, 2000, false, false);
+let fiyero = new Horse("Fiyero", "Prince", "🌷 Flower", "Yellow", 4, 500, false, true);
 
 
 horses.push (
@@ -49,6 +56,10 @@ horses.push (
     new Horse("Glinda", "Princess", "🫑 Green Pepper", "Pink", 2, 2000, false, false),
     new Horse("Fiyero", "Prince", "🌷 Flower", "Yellow", 4, 500, false, true),
 );
+
+elphaba.rentNotice(10)
+glinda.rentNotice(5)
+fiyero.rentNotice(15)
 
 
 introduction(horses[0]);
